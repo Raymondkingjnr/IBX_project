@@ -38,8 +38,8 @@ const authors = [
 
 const Authors = () => {
   return (
-    <div className="grid items-center lg:grid-cols-2 py-10 pr-6 ">
-      <main className=" grid  place-items-center md:place-items-start md:px-20 px-10">
+    <div className="align-element grid items-center lg:grid-cols-2 py-10 pr-6 ">
+      <main className=" grid  place-items-center md:place-items-start">
         <h2 className=" font-extrabold text-2xl mb-8 text-black">
           {" "}
           <span className="linear-text">Best</span> Authors
@@ -52,7 +52,7 @@ const Authors = () => {
           <Button text="All Author" icon={<IoIosArrowForward />} />
         </div>
       </main>
-      <main className="grid md:grid-cols-3 place-content-center items-center place-items-center gap-y-4 gap-x-[1rem] lg:gap-x-10 px-20 py-9 relative">
+      <main className="grid md:grid-cols-3 place-content-center items-center place-items-center gap-y-4 gap-x-[1rem] lg:gap-x-10 py-9 relative">
         {authors.map((item) => (
           <div className=" w-[180px] lg:pl-6 relative z-40">
             <Image

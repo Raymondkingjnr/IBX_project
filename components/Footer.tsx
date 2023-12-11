@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Footerlinks from "./Footerlinks";
 
 const Footer = () => {
   return (
@@ -31,10 +32,15 @@ const Footer = () => {
         </div>
       </main>
       <main>
-        <h1 className="text-center font-bold">Hello</h1>
+        <Footerlinks />
       </main>
-      <main>
-        <h1 className="text-center font-bold">Hello</h1>
+      <main className="flex justify-between">
+        <p className=" text-gray-400 font-medium text-base">
+          privacy policy | terms & conditions
+        </p>
+        <p className=" text-gray-400 font-medium text-base">
+          all copyright (c) 2023 reserved
+        </p>
       </main>
     </section>
   );

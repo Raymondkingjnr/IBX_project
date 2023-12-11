@@ -6,8 +6,9 @@ import Image from "next/image";
 const SearchContainer = () => {
   return (
     <div className=" align-element grid place-content-center place-items-center w-auto">
-      <h3 className="text-center font-extrabold text-2xl tracking-tight leading-10 pb-9">
-        Search among <span>58340</span> Books and <br /> find your favorite Book
+      <h3 className="text-center font-extrabold text-lg md:text-2xl tracking-tight leading-10 pb-9">
+        Search among <span className="linear-text">58340</span> Books and <br />{" "}
+        find your favorite Book
       </h3>
       <main className="flex flex-wrap gap-5 place-content-center place-items-center">
         <Button text="categories" />

@@ -59,6 +59,7 @@ body {
   height: fit-content;
   background-repeat: no-repeat;
   margin-right: 4rem;
+  width: 100%;
 }
 @media screen and (max-width: 600px) {
   .authors {
