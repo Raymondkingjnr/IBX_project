@@ -30,7 +30,7 @@ const YourBooks = () => {
       <main className="flex justify-between place-content-center place-items-center">
         <div className="flex items-center gap-2 ">
           <div className=" h-1 w-1 rounded-full bg-[#9747FF]" />
-          <h1 className="font-bold text-lg text-black text-left uppercase">
+          <h1 className="font-bold text-lg text-gray-600 text-left uppercase">
             Your Books
           </h1>
         </div>

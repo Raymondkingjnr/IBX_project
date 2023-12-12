@@ -41,7 +41,7 @@ const Authors = () => {
     <section className="align-element">
       <div className=" grid items-center lg:grid-cols-2 my-20">
         <main className=" grid  place-items-center  lg:w-[500px] md:place-items-start pb-8">
-          <h2 className=" font-extrabold text-2xl mb-8 text-black">
+          <h2 className=" font-extrabold text-2xl mb-8 text-gray-600">
             {" "}
             <span className="linear-text">Best</span> Authors
           </h2>

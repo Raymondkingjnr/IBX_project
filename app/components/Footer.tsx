@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <section className=" align-element">
       <main className="flex flex-col md:flex-row  place-items-center gap-20">
-        <p className=" bg-[#F5F2FA] p-6 rounded-2xl leading-7 ">
+        <p className=" bg-[#F5F2FA] text-gray-950 p-6 rounded-2xl leading-7 ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas
           purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris
@@ -26,7 +26,7 @@ const Footer = () => {
             height={100}
             className=" object-contain"
           />
-          <h1 className="font-extrabold text-3xl tracking-tight text-black mt-4">
+          <h1 className="font-extrabold text-3xl tracking-tight text-gray-700 mt-4">
             ACADEMY
           </h1>
         </div>

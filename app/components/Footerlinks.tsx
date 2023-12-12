@@ -9,7 +9,7 @@ const Footerlinks = () => {
       <main className="mt-12">
         <div className="flex place-items-center gap-2 mb-3">
           <div className=" h-1 w-1 rounded-full bg-[#9747FF]" />
-          <h1 className="font-bold text-lg text-black uppercase ">
+          <h1 className="font-bold text-lg text-gray-600 uppercase ">
             Membership Certificate
           </h1>
         </div>
@@ -26,7 +26,7 @@ const Footerlinks = () => {
           <div className="grid">
             <div className="flex items-center gap-2 mb-3">
               <div className=" h-1 w-1 rounded-full bg-[#9747FF]" />
-              <h1 className="font-bold text-lg text-black text-left uppercase">
+              <h1 className="font-bold text-lg text-gray-700 text-left uppercase">
                 {item.title}
               </h1>
             </div>
@@ -43,7 +43,7 @@ const Footerlinks = () => {
       <main className="grid">
         <div className="flex items-center mt-12 gap-2 ">
           <div className=" h-1 w-1 rounded-full bg-[#9747FF]" />
-          <h1 className="font-bold text-lg text-black text-left uppercase">
+          <h1 className="font-bold text-lg text-gray-700 text-left uppercase">
             New Comments
           </h1>
         </div>

@@ -35,7 +35,7 @@ const TopBooks = () => {
       <main className="flex flex-col md:flex-row gap-y-6 place-items-center place-content-center justify-between">
         <div className="flex items-center gap-2 ">
           <div className=" h-1 w-1 rounded-full bg-[#9747FF]" />
-          <h1 className="font-bold text-lg text-black text-left uppercase">
+          <h1 className="font-bold text-lg text-gray-700 text-left uppercase">
             Top Books
           </h1>
         </div>
