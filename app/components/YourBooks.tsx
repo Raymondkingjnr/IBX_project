@@ -40,6 +40,9 @@ const YourBooks = () => {
           </button>
         </div>
       </main>
+
+      {/* DISPLAY YOUR BOOKS */}
+
       <main className="grid lg:grid-cols-2 place-content-center place-items-center gap-y-12 gap-x-8 mt-10">
         {books?.slice(3, 7)?.map((book, index) => (
           <div

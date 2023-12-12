@@ -40,7 +40,7 @@ const Authors = () => {
   return (
     <section className="align-element">
       <div className=" grid items-center lg:grid-cols-2 my-20">
-        <main className=" grid  place-items-center  lg:w-[500px] md:place-items-start pb-8">
+        <main className=" grid  place-items-center  lg:w-[420px] md:place-items-start pb-8">
           <h2 className=" font-extrabold text-2xl mb-8 text-gray-600">
             {" "}
             <span className="linear-text">Best</span> Authors
@@ -53,6 +53,9 @@ const Authors = () => {
             <Button text="All Author" icon={<IoIosArrowForward />} />
           </div>
         </main>
+
+        {/* AUTHORS CONTAINER */}
+
         <main className="grid md:grid-cols-3 place-content-center items-center place-items-center gap-y-4 gap-x-[1rem] lg:gap-x-10 ">
           {authors.map((item) => (
             <div className=" w-[180px] lg:pl-6  relative z-40">

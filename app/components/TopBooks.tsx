@@ -49,6 +49,8 @@ const TopBooks = () => {
         </div>
       </main>
 
+      {/* DISPLAY TOP BOOKS */}
+
       <div className="gap-8 carousel flex items-center place-items-center rounded-box carousel-center mt-10">
         {random_books?.map((book, index) => (
           <div

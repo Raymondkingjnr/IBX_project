@@ -6,19 +6,7 @@ import { Card, SearchContainer } from ".";
 
 const BooksContainer = () => {
   const dispatch = useDispatch();
-  // const [currentPage, setCurrentPage] = useState(1);
   const { books, isLoading, query } = useSelector((store) => store.books);
-  // const itemsPerPage = 8;
-
-  // const totalPages = Math.ceil(books.length / itemsPerPage);
-
-  //Get current Items
-
-  // const index_last_item = currentPage * itemsPerPage;
-  // const index_first_item = index_last_item - itemsPerPage;
-  // const current_item = books.slice(index_first_item, index_last_item);
-
-  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const bookNumber = books?.slice(0, 8);
 
@@ -59,19 +47,6 @@ const BooksContainer = () => {
           <Card book={book} key={index} />
         ))}
       </main>
-      {/* <main className="join mt-6">
-        {[...Array(totalPages)].map((e, i) => (
-          <button
-            key={i}
-            onClick={() => paginate(i + 1)}
-            className={`join-item btn ${
-              currentPage === i + 1 ? "btn-active" : ""
-            }`}
-          >
-            {i + 1}
-          </button>
-        ))}
-      </main> */}
     </section>
   );
 };
