@@ -19,8 +19,8 @@ const YourBooks = () => {
 
   if (isLoading) {
     return (
-      <div className="grid place-content-center place-items-center">
-        <span className="loading loading-ring loading-lg"></span>;
+      <div className="grid place-content-center place-items-center my-20">
+        <span className="loading loading-ring loading-lg"></span>
       </div>
     );
   }
@@ -44,14 +44,14 @@ const YourBooks = () => {
         {books.slice(3, 7).map((book, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row w-[300px] md:w-auto bg-gray-50 rounded-lg"
+            className="card flex flex-col md:flex-row w-[300px] md:w-auto bg-gray-100 rounded-lg"
           >
             <Image
               src={"/book2.jpg"}
               alt="book-img"
               width={300}
               height={300}
-              className=" object-contain rounded-lg"
+              className=" object-contain rounded-2xl"
             />
             <main className="px-5 py-4">
               <p className=" font-bold text-sm tracking-tight text-black ">
@@ -85,7 +85,7 @@ const YourBooks = () => {
                   ))}
                 </h3>
               </div>
-              <p className="pt-5 font-medium text-sm text-gray-500">
+              <p className="pt-5 font-medium text-sm text-gray-500 w-[200px]">
                 {book.description}
               </p>
               <div className="grid float-right items-end mt-[3rem]">

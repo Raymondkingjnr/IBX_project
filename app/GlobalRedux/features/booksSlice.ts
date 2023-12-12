@@ -1,10 +1,11 @@
 "use client";
 import { url } from "@/utils";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { error } from "console";
 
 const initialState = {
   books: [],
+  top_books: [],
+  query: "",
   isLoading: true,
   error: "",
 };
@@ -12,12 +13,25 @@ const initialState = {
 export const get_books = createAsyncThunk(
   "books/get_books",
   async (_, thunkAPI) => {
-    const getState = thunkAPI;
+    const { query } = thunkAPI.getState().books;
 
     try {
-      const resp = await fetch(url);
+      const resp = await fetch(`${url}?search=${query}`);
       const result = resp.json();
-      console.log(result);
+      // console.log(result);
+      return result;
+    } catch (error) {
+      return thunkAPI.rejectWithValue("There was an error");
+    }
+  }
+);
+export const get_top_books = createAsyncThunk(
+  "books/get_books",
+  async (_, thunkAPI) => {
+    try {
+      const resp = await fetch(`${url}?limit=20`);
+      const result = resp.json();
+      // console.log(result);
       return result;
     } catch (error) {
       return thunkAPI.rejectWithValue("There was an error");
@@ -28,7 +42,11 @@ export const get_books = createAsyncThunk(
 const bookSlice = createSlice({
   name: "books",
   initialState,
-  reducers: {},
+  reducers: {
+    setQuery: (state, action) => {
+      state.query = action.payload;
+    },
+  },
 
   extraReducers: (builder) => {
     builder
@@ -38,12 +56,25 @@ const bookSlice = createSlice({
       .addCase(get_books.fulfilled, (state, action) => {
         state.isLoading = false;
         state.books = action.payload;
-        console.log(state.books);
+        // console.log(state.books);
       })
       .addCase(get_books.rejected, (state, { payload }) => {
+        state.error;
+      })
+      .addCase(get_top_books.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(get_top_books.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.top_books = action.payload;
+        // console.log(state.books);
+      })
+      .addCase(get_top_books.rejected, (state, { payload }) => {
         state.error;
       });
   },
 });
+
+export const { setQuery } = bookSlice.actions;
 
 export default bookSlice.reducer;

@@ -7,19 +7,19 @@ import { getRandomData } from "@/utils";
 
 const BooksContainer = () => {
   const dispatch = useDispatch();
-  const { books, isLoading } = useSelector((store) => store.books);
+  const { books, isLoading, query } = useSelector((store) => store.books);
 
   useEffect(() => {
     dispatch(get_books());
-  }, []);
+  }, [query]);
 
-  let data = getRandomData(books, 8);
+  // let data = getRandomData(books, 8);
   // console.log(data);
 
   if (isLoading) {
     return (
-      <div className="grid place-content-center place-items-center">
-        <span className="loading loading-ring loading-lg"></span>;
+      <div className="grid place-content-center place-items-center my-20">
+        <span className="loading loading-ring loading-lg"></span>
       </div>
     );
   }
@@ -43,7 +43,7 @@ const BooksContainer = () => {
         </main>
       </main>
       <main className="grid md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-14 place-content-center items-center place-items-center pt-6">
-        {data.map((book, index) => (
+        {books.slice(0, 8).map((book, index) => (
           <Card book={book} key={index} />
         ))}
       </main>

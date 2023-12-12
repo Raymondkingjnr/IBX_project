@@ -23,14 +23,14 @@ const Card = ({ book }: bookCarProps) => {
   } = book;
 
   return (
-    <div className=" bg-[#E6E6E6] rounded-lg">
-      <main className=" w-[]">
+    <div className=" bg-[#E6E6E6] rounded-lg card">
+      <main className=" rounded-lg">
         <Image
           src={"/book.jpg"}
           alt="img"
           width={500}
           height={500}
-          className=" object-contain rounded-lg mb-2"
+          className=" object-contain rounded-xl p-2 mb-2"
         />
       </main>
       <div className=" px-4 py-3">

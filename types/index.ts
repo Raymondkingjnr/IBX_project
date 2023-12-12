@@ -9,6 +9,8 @@ export interface ButtonProps {
 export interface SearchProps {
   type: string;
   icon: IconType;
+  value: string;
+  handleChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 export interface BookProps {
