@@ -5,10 +5,9 @@ import {
   Header,
   Hero,
   Newsletter,
-  SearchContainer,
   TopBooks,
   YourBooks,
-} from "@/components";
+} from "@/app/components";
 
 import Image from "next/image";
 
@@ -17,7 +16,6 @@ export default function Home() {
     <main className=" overflow-hidden">
       <Header />
       <Hero />
-      <SearchContainer />
       <BooksContainer />
       <Authors />
       <YourBooks />

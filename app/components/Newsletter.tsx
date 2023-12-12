@@ -14,7 +14,7 @@ const Newsletter = () => {
           <input
             type="email"
             placeholder="Email adress"
-            className="input input-bordered input-lg w-[300px] md:w-[500px] max-w-lg"
+            className="input input-bordered input-lg md:w-[500px] max-w-lg"
           />
           <div className=" absolute btn top-2 right-2 bg-black text-white font-bold rounded-lg text-sm w-32 grid place-content-center p-2">
             <p className=" capitalize">submit</p>

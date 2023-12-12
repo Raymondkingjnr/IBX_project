@@ -1,8 +1,8 @@
 export const url = "https://freetestapi.com/api/v1/books";
 
 export const getRandomData = (arr, count) => {
-  let shuffled = arr.slice(0),
-    i = arr.length,
+  let shuffled = arr?.slice(0),
+    i = arr?.length,
     min = i - count,
     temp,
     index;
@@ -12,5 +12,5 @@ export const getRandomData = (arr, count) => {
     shuffled[index] = shuffled[i];
     shuffled[i] = temp;
   }
-  return shuffled.slice(min);
+  return shuffled?.slice(min);
 };

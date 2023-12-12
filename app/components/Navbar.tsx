@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className=" hidden md:flex navbar-center">
         <Search type="text" icon={<CiSearch />} />
       </div>
-      <div className=" navbar-end p-3 w-[300px] gap-x-10">
+      <div className=" navbar-end hidden md:flex p-3 w-[300px] gap-x-10">
         <main className="flex gap-2 place-content-center">
           <Image
             src={"/profile.png"}

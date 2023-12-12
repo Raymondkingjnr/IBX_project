@@ -4,7 +4,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   books: [],
-  top_books: [],
   query: "",
   isLoading: true,
   error: "",
@@ -17,19 +16,6 @@ export const get_books = createAsyncThunk(
 
     try {
       const resp = await fetch(`${url}?search=${query}`);
-      const result = resp.json();
-      // console.log(result);
-      return result;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("There was an error");
-    }
-  }
-);
-export const get_top_books = createAsyncThunk(
-  "books/get_books",
-  async (_, thunkAPI) => {
-    try {
-      const resp = await fetch(`${url}?limit=20`);
       const result = resp.json();
       // console.log(result);
       return result;
@@ -59,17 +45,6 @@ const bookSlice = createSlice({
         // console.log(state.books);
       })
       .addCase(get_books.rejected, (state, { payload }) => {
-        state.error;
-      })
-      .addCase(get_top_books.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(get_top_books.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.top_books = action.payload;
-        // console.log(state.books);
-      })
-      .addCase(get_top_books.rejected, (state, { payload }) => {
         state.error;
       });
   },

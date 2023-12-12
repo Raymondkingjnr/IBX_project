@@ -41,7 +41,7 @@ const YourBooks = () => {
         </div>
       </main>
       <main className="grid lg:grid-cols-2 place-content-center place-items-center gap-y-12 gap-x-8 mt-10">
-        {books.slice(3, 7).map((book, index) => (
+        {books?.slice(3, 7)?.map((book, index) => (
           <div
             key={index}
             className="card flex flex-col md:flex-row w-[300px] md:w-auto bg-gray-100 rounded-lg"
@@ -55,7 +55,7 @@ const YourBooks = () => {
             />
             <main className="px-5 py-4">
               <p className=" font-bold text-sm tracking-tight text-black ">
-                {book.title}
+                {book?.title}
               </p>
               <main className="flex justify-between gap-16 place-items-center py-5">
                 <div className="flex gap-2 place-items-center">
@@ -63,7 +63,7 @@ const YourBooks = () => {
                     <IoPersonCircleOutline />
                   </p>
                   <h3 className=" font-medium text-sm text-gray-400">
-                    {book.author}
+                    {book?.author}
                   </h3>
                 </div>
                 <div className="flex gap-2 place-items-center">
@@ -71,7 +71,7 @@ const YourBooks = () => {
                     <MdDateRange />
                   </p>
                   <h4 className=" font-medium text-sm text-gray-400">
-                    {book.publication_year}
+                    {book?.publication_year}
                   </h4>
                 </div>
               </main>
@@ -79,14 +79,18 @@ const YourBooks = () => {
                 <p className=" font-extrabold text-xl text-gray-400">
                   <FaMasksTheater />
                 </p>
-                <h3 className=" flex gap-2 font-medium text-sm text-gray-400">
-                  {book.genre.map((item) => (
-                    <h1>{item}</h1>
+                <div className=" flex gap-2">
+                  {book?.genre.map((item, index) => (
+                    <div key={index}>
+                      <h1 className=" font-medium text-sm text-gray-400">
+                        {item}
+                      </h1>
+                    </div>
                   ))}
-                </h3>
+                </div>
               </div>
               <p className="pt-5 font-medium text-sm text-gray-500 w-[200px]">
-                {book.description}
+                {book?.description}
               </p>
               <div className="grid float-right items-end mt-[3rem]">
                 <Button text="Let's Go" icon={<IoIosArrowForward />} />
