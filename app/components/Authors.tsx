@@ -64,7 +64,7 @@ const Authors = () => {
                 className=" object-contain rounded-lg "
               />
               <div className="flex mt-2 justify-between">
-                <p className=" font-bold text-xs text-gray-700">{item.name}</p>
+                <p className=" font-bold text-xs text-gray-300">{item.name}</p>
                 <p className=" font-bold text-xs text-gray-400">Author</p>
               </div>
             </div>
