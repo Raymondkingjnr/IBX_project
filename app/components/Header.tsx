@@ -3,7 +3,7 @@ import { Navbar, Themes } from ".";
 
 const Header = () => {
   return (
-    <div className=" align-element">
+    <div className=" max-w-7xl mx-auto px-6 pt-1">
       <Navbar />
       <Themes />
     </div>

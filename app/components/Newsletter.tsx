@@ -3,7 +3,7 @@ import React from "react";
 const Newsletter = () => {
   return (
     <section className="authors ">
-      <div className="py-20 align-element flex flex-wrap align-middle place-content-center place-items-center justify-between gap-10">
+      <div className="py-20 align-element flex flex-wrap align-middle items-center place-content-center place-items-center justify-between gap-10">
         <main>
           <h1 className="text-2xl font-bold tracking-tight text-center md:w-[400px] md:text-left">
             Find out about the latest courses with the{" "}

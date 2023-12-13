@@ -39,14 +39,14 @@ const TopBooks = () => {
             Top Books
           </h1>
         </div>
-        <div className="flex gap-6">
+        {/* <div className="flex gap-6">
           <button className="btn bg-[#F5F5F5] text-3xl font-extrabold text-gray-800 capitalize">
             <IoIosArrowBack />
           </button>
           <button className="btn bg-[#F5F5F5] text-3xl font-extrabold text-gray-800 capitalize">
             <IoIosArrowForward />
           </button>
-        </div>
+        </div> */}
       </main>
 
       {/* DISPLAY TOP BOOKS */}
